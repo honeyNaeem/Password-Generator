@@ -22,7 +22,21 @@ function clickHua() {
         password += characters[random]
     }
 
-    alert("Your password is generated")
+    // alert("Your password is generated")
+    Toastify({
+        text: "Your Password is generated",
+        duration: 1000,
+        // destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: false,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right,rgb(0, 33, 219),rgb(32, 240, 0))",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
 
     inputBox.value = password
 
